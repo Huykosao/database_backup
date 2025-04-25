@@ -60,4 +60,4 @@ def backup_file():
 schedule.every().day.at("00:00").do(backup_file)
 while True:
     schedule.run_pending()
-    time.sleep(20)
+    time.sleep(39)
