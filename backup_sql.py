@@ -17,7 +17,6 @@ app_password = os.getenv("app_password")
 receiver = os.getenv("receiver")
 subject = os.getenv("subject")
 body_false = "Sao Lưu Thất Bại Vui Long Kiểm Tra Lại file"
-
 def send_email(sender,receiver,subject,body,password):
     message = MIMEMultipart()
     message['From'] = sender
@@ -61,4 +60,4 @@ def backup_file():
 schedule.every().day.at("00:00").do(backup_file)
 while True:
     schedule.run_pending()
-    time.sleep(39)
+    time.sleep(20)
